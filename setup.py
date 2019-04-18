@@ -16,7 +16,7 @@ setuptools.setup(
     install_requires=['requests', 'pytz'],
     classifiers=[
         'Programming Language :: Python :: 3',
-        'OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         'Operating System :: OS Independent',
     ],
 )
