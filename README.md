@@ -1,15 +1,14 @@
 # DWD Pollen API Client
 
-The DWD (Deutscher Wetterdienst) published information about the current and future pollen load in Germany.
-The data is publish as an [JSON endpoint](https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json) and documented in this [German PDF](https://opendata.dwd.de/climate_environment/health/alerts/Beschreibung_pollen_s31fg.pdf).
+The DWD (Deutscher Wetterdienst) publishes information about the current and future pollen load in Germany.
+The data is published as an [JSON endpoint](https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json) and documented in this [German PDF](https://opendata.dwd.de/climate_environment/health/alerts/Beschreibung_pollen_s31fg.pdf).
 
 ## Install
 ```angular2html
 pip install dwdpollen
 ```
 
-## Usage
-
+## `region_id` and `partregion_id`
 The API uses the `region_id` and `partregion_id` to identify the different regions in Germany. The following regions are available:
 
 ```
@@ -53,6 +52,10 @@ Bayern (region_id: 120): Bayern n. der Donau, o. Bayr. Wald, o. Mainfranken (par
 Bayern (region_id: 120): Mainfranken (partregion_id: 124)
 
 ```
+
+## Usage
+
+The API will return the data on a best effort basis. There is no guarantee which dates exist in the result. Mostly the current and the next day are available and on Friday after 11 AM the data for Sunday should be available. But there is no guarantee, so the caller has to check the result itself.
 
 ```
 import dwdpollen
