@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='dwdpollen',
-    version='0.0.1',
+    version='0.1.0',
     author='Max Rosin',
     author_email='git@hackrid.de',
     description='API client for the "Deutscher Wetterdienst" to get the current pollen load in Germany',
