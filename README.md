@@ -34,7 +34,7 @@ The API uses the `region_id` and `partregion_id` to identify the different regio
 |                                |             | Rhein-Main                                         | 92              |
 | Rheinland-Pfalz und Saarland   | 100         | Saarland                                           | 103             |
 |                                |             | Rhein, Pfalz, Nahe und Mosel                       | 101             |
-| Rheinland-Pfalz und Saarland   | 100         | Mittelgebirgsbereich Rheinland-Pfalz               | 102             |
+|                                |             | Mittelgebirgsbereich Rheinland-Pfalz               | 102             |
 | Baden-Württemberg              | 110         | Oberrhein und unteres Neckartal                    | 111             |
 |                                |             | Hohenlohe/mittlerer Neckar/Oberschwaben            | 112             |
 |                                |             | Mittelgebirge Baden-Württemberg                    | 113             |
