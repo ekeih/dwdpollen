@@ -16,32 +16,32 @@ The API uses the `region_id` and `partregion_id` to identify the different regio
 | Region                         | `region_id` | Partregion                                         | `partregion_id` |
 | ------------------------------ | ----------- | -------------------------------------------------- | --------------- |
 | Schleswig-Holstein und Hamburg | 10          | Inseln und Marschen                                | 11              |
-| Schleswig-Holstein und Hamburg | 10          | Geest, Schleswig-Holstein und Hamburg              | 12              |
+|                                |             | Geest, Schleswig-Holstein und Hamburg              | 12              |
 | Mecklenburg-Vorpommern         | 20          |                                                    | -1              |
 | Niedersachsen und Bremen       | 30          | Westl. Niedersachsen/Bremen                        | 31              |
-| Niedersachsen und Bremen       | 30          | Östl. Niedersachsen                                | 32              |
+|                                |             | Östl. Niedersachsen                                | 32              |
 | Nordrhein-Westfalen            | 40          | Rhein.-Westfäl. Tiefland                           | 41              |
-| Nordrhein-Westfalen            | 40          | Ostwestfalen                                       | 42              |
-| Nordrhein-Westfalen            | 40          | Mittelgebirge NRW                                  | 43              |
+|                                |             | Ostwestfalen                                       | 42              |
+|                                |             | Mittelgebirge NRW                                  | 43              |
 | Brandenburg und Berlin         | 50          |                                                    | -1              |
 | Sachsen-Anhalt                 | 60          | Tiefland Sachsen-Anhalt                            | 61              |
-| Sachsen-Anhalt                 | 60          | Harz                                               | 62              |
+|                                |             | Harz                                               | 62              |
 | Thüringen                      | 70          | Tiefland Thüringen                                 | 71              |
-| Thüringen                      | 70          | Mittelgebirge Thüringen                            | 72              |
+|                                |             | Mittelgebirge Thüringen                            | 72              |
 | Sachsen                        | 80          | Tiefland Sachsen                                   | 81              |
-| Sachsen                        | 80          | Mittelgebirge Sachsen                              | 82              |
+|                                |             | Mittelgebirge Sachsen                              | 82              |
 | Hessen                         | 90          | Nordhessen und hess. Mittelgebirge                 | 91              |
-| Hessen                         | 90          | Rhein-Main                                         | 92              |
+|                                |             | Rhein-Main                                         | 92              |
 | Rheinland-Pfalz und Saarland   | 100         | Saarland                                           | 103             |
-| Rheinland-Pfalz und Saarland   | 100         | Rhein, Pfalz, Nahe und Mosel                       | 101             |
+|                                |             | Rhein, Pfalz, Nahe und Mosel                       | 101             |
 | Rheinland-Pfalz und Saarland   | 100         | Mittelgebirgsbereich Rheinland-Pfalz               | 102             |
 | Baden-Württemberg              | 110         | Oberrhein und unteres Neckartal                    | 111             |
-| Baden-Württemberg              | 110         | Hohenlohe/mittlerer Neckar/Oberschwaben            | 112             |
-| Baden-Württemberg              | 110         | Mittelgebirge Baden-Württemberg                    | 113             |
+|                                |             | Hohenlohe/mittlerer Neckar/Oberschwaben            | 112             |
+|                                |             | Mittelgebirge Baden-Württemberg                    | 113             |
 | Bayern                         | 120         | Allgäu/Oberbayern/Bay. Wald                        | 121             |
-| Bayern                         | 120         | Donauniederungen                                   | 122             |
-| Bayern                         | 120         | Bayern n. der Donau, o. Bayr. Wald, o. Mainfranken | 123             |
-| Bayern                         | 120         | Mainfranken                                        | 124             |
+|                                |             | Donauniederungen                                   | 122             |
+|                                |             | Bayern n. der Donau, o. Bayr. Wald, o. Mainfranken | 123             |
+|                                |             | Mainfranken                                        | 124             |
 
 ## Usage
 
