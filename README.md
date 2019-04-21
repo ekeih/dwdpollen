@@ -1,5 +1,7 @@
 # DWD Pollen API Client
 
+[![PyPI version](https://badge.fury.io/py/dwdpollen.svg)](https://badge.fury.io/py/dwdpollen)
+
 The DWD (Deutscher Wetterdienst) publishes information about the current and future pollen load in Germany.
 The data is published as an [JSON endpoint](https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json) and documented in this [German PDF](https://opendata.dwd.de/climate_environment/health/alerts/Beschreibung_pollen_s31fg.pdf).
 
@@ -11,57 +13,48 @@ pip install dwdpollen
 ## `region_id` and `partregion_id`
 The API uses the `region_id` and `partregion_id` to identify the different regions in Germany. The following regions are available:
 
-```
-Schleswig-Holstein und Hamburg (region_id: 10): Inseln und Marschen (partregion_id: 11)
-Schleswig-Holstein und Hamburg (region_id: 10): Geest, Schleswig-Holstein und Hamburg (partregion_id: 12)
-
-Mecklenburg-Vorpommern  (region_id: 20, partregion_id: -1)
-
-Niedersachsen und Bremen (region_id: 30): Westl. Niedersachsen/Bremen (partregion_id: 31)
-Niedersachsen und Bremen (region_id: 30): Östl. Niedersachsen (partregion_id: 32)
-
-Nordrhein-Westfalen (region_id: 40): Rhein.-Westfäl. Tiefland (partregion_id: 41)
-Nordrhein-Westfalen (region_id: 40): Ostwestfalen (partregion_id: 42)
-Nordrhein-Westfalen (region_id: 40): Mittelgebirge NRW (partregion_id: 43)
-
-Brandenburg und Berlin  (region_id: 50, partregion_id: -1)
-
-Sachsen-Anhalt (region_id: 60): Tiefland Sachsen-Anhalt (partregion_id: 61)
-Sachsen-Anhalt (region_id: 60): Harz (partregion_id: 62)
-
-Thüringen (region_id: 70): Tiefland Thüringen (partregion_id: 71)
-Thüringen (region_id: 70): Mittelgebirge Thüringen (partregion_id: 72)
-
-Sachsen (region_id: 80): Tiefland Sachsen (partregion_id: 81)
-Sachsen (region_id: 80): Mittelgebirge Sachsen (partregion_id: 82)
-
-Hessen (region_id: 90): Nordhessen und hess. Mittelgebirge (partregion_id: 91)
-Hessen (region_id: 90): Rhein-Main (partregion_id: 92)
-
-Rheinland-Pfalz und Saarland (region_id: 100): Saarland (partregion_id: 103)
-Rheinland-Pfalz und Saarland (region_id: 100): Rhein, Pfalz, Nahe und Mosel (partregion_id: 101)
-Rheinland-Pfalz und Saarland (region_id: 100): Mittelgebirgsbereich Rheinland-Pfalz (partregion_id: 102)
-
-Baden-Württemberg (region_id: 110): Oberrhein und unteres Neckartal (partregion_id: 111)
-Baden-Württemberg (region_id: 110): Hohenlohe/mittlerer Neckar/Oberschwaben (partregion_id: 112)
-Baden-Württemberg (region_id: 110): Mittelgebirge Baden-Württemberg (partregion_id: 113)
-
-Bayern (region_id: 120): Allgäu/Oberbayern/Bay. Wald (partregion_id: 121)
-Bayern (region_id: 120): Donauniederungen (partregion_id: 122)
-Bayern (region_id: 120): Bayern n. der Donau, o. Bayr. Wald, o. Mainfranken (partregion_id: 123)
-Bayern (region_id: 120): Mainfranken (partregion_id: 124)
-
-```
+| Region                         | `region_id` | Partregion                                         | `partregion_id` |
+| ------------------------------ | ----------- | -------------------------------------------------- | --------------- |
+| Schleswig-Holstein und Hamburg | 10          | Inseln und Marschen                                | 11              |
+| Schleswig-Holstein und Hamburg | 10          | Geest, Schleswig-Holstein und Hamburg              | 12              |
+| Mecklenburg-Vorpommern         | 20          |                                                    | -1              |
+| Niedersachsen und Bremen       | 30          | Westl. Niedersachsen/Bremen                        | 31              |
+| Niedersachsen und Bremen       | 30          | Östl. Niedersachsen                                | 32              |
+| Nordrhein-Westfalen            | 40          | Rhein.-Westfäl. Tiefland                           | 41              |
+| Nordrhein-Westfalen            | 40          | Ostwestfalen                                       | 42              |
+| Nordrhein-Westfalen            | 40          | Mittelgebirge NRW                                  | 43              |
+| Brandenburg und Berlin         | 50          |                                                    | -1              |
+| Sachsen-Anhalt                 | 60          | Tiefland Sachsen-Anhalt                            | 61              |
+| Sachsen-Anhalt                 | 60          | Harz                                               | 62              |
+| Thüringen                      | 70          | Tiefland Thüringen                                 | 71              |
+| Thüringen                      | 70          | Mittelgebirge Thüringen                            | 72              |
+| Sachsen                        | 80          | Tiefland Sachsen                                   | 81              |
+| Sachsen                        | 80          | Mittelgebirge Sachsen                              | 82              |
+| Hessen                         | 90          | Nordhessen und hess. Mittelgebirge                 | 91              |
+| Hessen                         | 90          | Rhein-Main                                         | 92              |
+| Rheinland-Pfalz und Saarland   | 100         | Saarland                                           | 103             |
+| Rheinland-Pfalz und Saarland   | 100         | Rhein, Pfalz, Nahe und Mosel                       | 101             |
+| Rheinland-Pfalz und Saarland   | 100         | Mittelgebirgsbereich Rheinland-Pfalz               | 102             |
+| Baden-Württemberg              | 110         | Oberrhein und unteres Neckartal                    | 111             |
+| Baden-Württemberg              | 110         | Hohenlohe/mittlerer Neckar/Oberschwaben            | 112             |
+| Baden-Württemberg              | 110         | Mittelgebirge Baden-Württemberg                    | 113             |
+| Bayern                         | 120         | Allgäu/Oberbayern/Bay. Wald                        | 121             |
+| Bayern                         | 120         | Donauniederungen                                   | 122             |
+| Bayern                         | 120         | Bayern n. der Donau, o. Bayr. Wald, o. Mainfranken | 123             |
+| Bayern                         | 120         | Mainfranken                                        | 124             |
 
 ## Usage
 
 The API will return the data on a best effort basis. There is no guarantee which dates exist in the result. Mostly the current and the next day are available and on Friday after 11 AM the data for Sunday should be available. But there is no guarantee, so the caller has to check the result itself.
+**What?** Yes... it sounds strange... but usually the DWD updates the API result everyday at 11 AM and on Friday the forecast for Sunday is included.
 
 ```
 import dwdpollen
 api = dwdpollen.DwdPollenApi()
 api.get_pollen(50, -1)
+```
 
+```
 {'region_id': 50,
  'region_name': 'Brandenburg und Berlin ',
  'partregion_id': -1,
