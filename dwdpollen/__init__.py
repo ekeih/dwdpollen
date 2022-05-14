@@ -154,12 +154,15 @@ class DwdPollenApi:
         elif today.weekday() == 5: # Saturday
             new_pollen = {
                 today.strftime('%Y-%m-%d'): build_values(allergen['tomorrow']),
-                tomorrow.strftime('%Y-%m-%d'): build_values(allergen['dayafter_to'])
             }
+            if allergen['dayafter_to'] != '-1':
+                new_pollen[day_after_tomorrow.strftime('%Y-%m-%d')] = \
+                    build_values(allergen['dayafter_to'])
         elif today.weekday() == 6: # Sunday
-            new_pollen = {
-                today.strftime('%Y-%m-%d'): build_values(allergen['dayafter_to'])
-            }
+            new_pollen = {}
+            if allergen['dayafter_to'] != '-1':
+                new_pollen[day_after_tomorrow.strftime('%Y-%m-%d')] = \
+                    build_values(allergen['dayafter_to'])
         return new_pollen
 
     def update(self):
